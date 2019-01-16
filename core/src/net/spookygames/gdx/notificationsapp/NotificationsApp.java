@@ -23,6 +23,8 @@ public class NotificationsApp extends ApplicationAdapter {
 
     private Stage stage;
 
+    private int notificationID = 0;
+
     @Override
     public void create() {
         Gdx.app.setLogLevel(Application.LOG_DEBUG);
@@ -46,9 +48,10 @@ public class NotificationsApp extends ApplicationAdapter {
         showNotificationButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                NotificationParameters parameters = new NotificationParameters(titleTextField.getText(), textTextArea.getText(), MathUtils.random(1000000));
+                NotificationParameters parameters = new NotificationParameters(titleTextField.getText(), textTextArea.getText(), notificationID);
                 handler.showNotification(parameters);
                 notificationParameters.add(parameters);
+                notificationID++;
             }
         });
         stage.addActor(showNotificationButton);

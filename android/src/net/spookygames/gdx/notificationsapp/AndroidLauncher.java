@@ -3,7 +3,7 @@ package net.spookygames.gdx.notificationsapp;
 import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import net.spookygames.gdx.notifications.AndroidNotificationHandler;
+import net.spookygames.gdx.notifications.android.AndroidNotificationHandler;
 
 public class AndroidLauncher extends AndroidApplication {
     @Override
