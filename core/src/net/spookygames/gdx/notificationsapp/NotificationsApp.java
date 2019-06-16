@@ -4,7 +4,6 @@ import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
@@ -48,7 +47,7 @@ public class NotificationsApp extends ApplicationAdapter {
         showNotificationButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                NotificationParameters parameters = new NotificationParameters(titleTextField.getText(), textTextArea.getText(), notificationID);
+                NotificationParameters parameters = new NotificationParameters(notificationID, titleTextField.getText(), textTextArea.getText());
                 handler.showNotification(parameters);
                 notificationParameters.add(parameters);
                 notificationID++;
