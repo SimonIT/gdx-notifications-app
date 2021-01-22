@@ -12,6 +12,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.wisepersist:gwt-gradle-plugin:1.1.10'
+        classpath 'org.gretty:gretty:3.0.3'
         classpath 'com.android.tools.build:gradle:4.0.2'
     }
 }
@@ -43,58 +44,60 @@ allprojects {
 }
 
 project(":desktop") {
-    apply plugin: "java"
+    apply plugin: "java-library"
 
 
     dependencies {
-        compile project(":core")
-        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-        compile "net.spookygames.gdx:gdx-notifications-desktop-os:$gdxNotificationsVersion"
-        // compile "net.spookygames.gdx:gdx-notifications-desktop-jcommunique:$gdxNotificationsVersion"
+        implementation project(":core")
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api "net.spookygames.gdx:gdx-notifications-desktop-os:$gdxNotificationsVersion"
+        // api "net.spookygames.gdx:gdx-notifications-desktop-jcommunique:$gdxNotificationsVersion"
     }
 }
 
 project(":android") {
-    apply plugin: "android"
+    apply plugin: "com.android.application"
 
     configurations { natives }
 
     dependencies {
-        compile project(":core")
-        compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+        implementation project(":core")
+        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
-        compile "net.spookygames.gdx:gdx-notifications-android:$gdxNotificationsVersion"
+        api "net.spookygames.gdx:gdx-notifications-android:$gdxNotificationsVersion"
     }
 }
 
 project(":html") {
+    apply plugin: "java-library"
     apply plugin: "gwt"
     apply plugin: "war"
+    apply plugin: "org.gretty"
 
 
     dependencies {
-        compile project(":core")
-        compile "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
-        compile "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion:sources"
-        compile "net.spookygames.gdx:gdx-notifications-html-browser:$gdxNotificationsVersion"
-        compile "net.spookygames.gdx:gdx-notifications:$gdxNotificationsVersion:sources"
-        compile "net.spookygames.gdx:gdx-notifications-html-browser:$gdxNotificationsVersion:sources"
+        implementation project(":core")
+        api "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
+        api "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion:sources"
+        api "net.spookygames.gdx:gdx-notifications-html-browser:$gdxNotificationsVersion"
+        api "net.spookygames.gdx:gdx-notifications:$gdxNotificationsVersion:sources"
+        api "net.spookygames.gdx:gdx-notifications-html-browser:$gdxNotificationsVersion:sources"
     }
 }
 
 project(":core") {
-    apply plugin: "java"
+    apply plugin: "java-library"
 
 
     dependencies {
-        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
-        compile "net.spookygames.gdx:gdx-notifications:$gdxNotificationsVersion"
+        api "com.badlogicgames.gdx:gdx:$gdxVersion"
+        api "net.spookygames.gdx:gdx-notifications:$gdxNotificationsVersion"
     }
 }
 

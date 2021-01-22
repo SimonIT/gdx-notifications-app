@@ -18,7 +18,7 @@ import net.spookygames.gdx.notifications.NotificationParameters;
 public class NotificationsApp extends ApplicationAdapter {
     public NotificationHandler handler;
 
-    private Array<NotificationParameters> notificationParameters = new Array<NotificationParameters>();
+    private final Array<NotificationParameters> notificationParameters = new Array<NotificationParameters>();
 
     private Stage stage;
 
