@@ -17,7 +17,7 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "net.spookygames.gdx.notificationsapp"
+        applicationId "games.spooky.gdx.notificationsapp"
         minSdkVersion 14
         targetSdkVersion 30
         versionCode 1
@@ -85,5 +85,5 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'net.spookygames.gdx.notificationsapp/net.spookygames.gdx.notificationsapp.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'games.spooky.gdx.notificationsapp/games.spooky.gdx.notofocationsapp.AndroidLauncher'
 }

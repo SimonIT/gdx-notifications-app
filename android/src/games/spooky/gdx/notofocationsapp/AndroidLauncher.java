@@ -1,9 +1,11 @@
-package net.spookygames.gdx.notificationsapp;
+package games.spooky.gdx.notofocationsapp;
 
 import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import net.spookygames.gdx.notifications.android.AndroidNotificationHandler;
+import games.spooky.gdx.notifications.android.AndroidNotificationHandler;
+import games.spooky.gdx.notificationsapp.NotificationsApp;
+import games.spooky.gdx.notificationsapp.R;
 
 public class AndroidLauncher extends AndroidApplication {
     @Override

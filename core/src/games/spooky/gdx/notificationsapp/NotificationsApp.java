@@ -1,4 +1,4 @@
-package net.spookygames.gdx.notificationsapp;
+package games.spooky.gdx.notificationsapp;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
@@ -12,8 +12,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Array;
-import net.spookygames.gdx.notifications.NotificationHandler;
-import net.spookygames.gdx.notifications.NotificationParameters;
+import games.spooky.gdx.notifications.NotificationHandler;
+import games.spooky.gdx.notifications.NotificationParameters;
 
 public class NotificationsApp extends ApplicationAdapter {
     public NotificationHandler handler;

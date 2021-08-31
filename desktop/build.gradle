@@ -4,7 +4,7 @@ sourceCompatibility = 1.6
 sourceSets.main.java.srcDirs = [ "src/" ]
 sourceSets.main.resources.srcDirs += ["../android/assets"]
 
-project.ext.mainClassName = "net.spookygames.gdx.notificationsapp.desktop.DesktopLauncher"
+project.ext.mainClassName = "games.spooky.gdx.notificationsapp.DesktopLauncher"
 project.ext.assetsDir = new File("../android/assets")
 
 task run(dependsOn: classes, type: JavaExec) {

@@ -1,11 +1,11 @@
-package net.spookygames.gdx.notificationsapp.client;
+package games.spooky.gdx.notificationsapp.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import net.spookygames.gdx.notifications.HtmlNotificationHandler;
-import net.spookygames.gdx.notificationsapp.NotificationsApp;
+import games.spooky.gdx.notifications.HtmlNotificationHandler;
+import games.spooky.gdx.notificationsapp.NotificationsApp;
 
 public class HtmlLauncher extends GwtApplication {
 

@@ -1,9 +1,9 @@
-package net.spookygames.gdx.notificationsapp.desktop;
+package games.spooky.gdx.notificationsapp;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import net.spookygames.gdx.notifications.desktop.DesktopNotificationHandler;
-import net.spookygames.gdx.notificationsapp.NotificationsApp;
+import games.spooky.gdx.notifications.desktop.DesktopNotificationHandler;
+import games.spooky.gdx.notificationsapp.NotificationsApp;
 
 public class DesktopLauncher {
     public static void main(String[] arg) {

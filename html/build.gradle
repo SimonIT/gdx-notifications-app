@@ -4,8 +4,8 @@ gwt {
     minHeapSize = "1G"
 
     src = files(file("src/")) // Needs to be in front of "modules" below.
-    modules 'net.spookygames.gdx.notificationsapp.GdxDefinition'
-    devModules 'net.spookygames.gdx.notificationsapp.GdxDefinitionSuperdev'
+    modules 'games.spooky.gdx.notificationsapp.GdxDefinition'
+    devModules 'games.spooky.gdx.notificationsapp.GdxDefinitionSuperdev'
     project.webAppDirName = 'webapp'
 
     compiler.strict = true
